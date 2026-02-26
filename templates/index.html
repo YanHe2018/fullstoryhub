@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ .Title }}</title>
+    <meta name="description" content="Read the best English web novels and stories online.">
+</head>
+<body>
+    <h1>Welcome to FullStoryHub</h1>
+    <ul>
+        {{ range $slug, $novel := .Novels }}
+        <li><a href="/novel/{{ $slug }}">{{ $novel.Title }}</a></li>
+        {{ end }}
+    </ul>
+    <hr>
+    <p>Powered by <a href="https://www.fullstoryhub.com">FullStoryHub Engine</a></p>
+</body>
+</html>
